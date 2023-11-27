@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #466184;
+    color: #ffffffad;
+    text-align: right;
+    padding: 25px 35px;
+    font-size: 12px;
+    box-shadow: 7px 2px 9px 6px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1; /* Place above other content */
+  }
+  .form-body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 400px; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+  
+  .header-content h1 {
+    margin: 0;
+    margin-right: 45px;
+    margin-bottom: 5px;
+  }
+  
+  .sales-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sales-table th, .sales-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .sales-table th {
+    background-color: #8fa7c5;
+    color: white;
+  }
+  
+  .sales-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  
+  main {
+    padding: 20px;
+    margin-top: 80px; /* Adjust margin-top to account for the header height */
+    margin-bottom: 40px; /* Adjust margin-bottom to account for the footer height */
+    overflow-y: auto; /* Enable vertical scrolling for the content */
+  }
+  
+  footer {
+    padding: 10px 0px;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #466184;
+    color: #ffffffad;
+    box-shadow: inset 0px -12px 16px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .footer-content p {
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .highlight{
+    background-color: yellow;
+  }
+  
+  .header-links {
+    float: right;
+    margin-right: 45px;
+  }
+  
+  .header-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header-link:hover {
+    text-decoration: underline;
+  }
+  
+    </style>
+  </head>
+  <body>
+    <header>
+      {{>header}}
+    </header>
+    <main>
+      <div class="content">
+        {{{body}}}
+      </div>
+    </main>
+    <footer>
+      {{>footer}}
+    </footer>
+  </body>
+</html>
+

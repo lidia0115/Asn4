@@ -1,0 +1,52 @@
+<h1>{{title}}</h1>
+<table class="sales-table">
+    <thead>
+        <tr>
+            <th>Invoice ID</th>
+            <th>Branch</th>
+            <th>City</th>
+            <th>Customer Type</th>
+            <th>Product Line</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Tax 5%</th>
+            <th>Total</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Payment</th>
+            <th>COGS</th>
+            <th>Gross Income</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each invoices}}
+          {{#each this}}
+            {{#if this.[_id]}}
+            <tr>
+                <td>{{this.[Invoice ID]}}</td>
+                <td>{{this.Branch}}</td>
+                <td>{{this.City}}</td>
+                <td>{{this.[Customer type]}}</td>
+                <td>{{this.[Product line]}}</td>
+                <td>{{this.name}}</td>
+                <td><img src="{{this.image}}" alt="Product Image" height="100" width="80"></td>  
+                <td>{{this.[Unit price]}}</td>
+                <td>{{this.Quantity}}</td>
+                <td>{{this.[Tax 5%]}}</td>
+                <td>{{this.Total}}</td>
+                <td>{{this.Date}}</td>
+                <td>{{this.Time}}</td>
+                <td>{{this.Payment}}</td>
+                <td>{{this.cogs}}</td>
+                <td>{{this.[gross income]}}</td>
+                <td>{{this.Rating}}</td>
+            </tr>
+            {{/if}}
+          {{/each}}
+        {{/each}}
+    </tbody>
+</table>
+

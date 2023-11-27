@@ -1,0 +1,58 @@
+
+    <h1>{{title}}</h1>
+    <div class="form-body">
+     <form action="/api/invoices" method="POST">
+        <label for="invoice_id">Invoice ID:</label>
+        <input type="text" id="invoice_id" name="Invoice ID" required><br>
+
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" name="Branch" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="City" required><br>
+
+        <label for="customerType">Customer Type:</label>
+        <input type="text" id="customerType" name="Customer type" required><br>
+
+        <label for="productLine">Product Line:</label>
+        <input type="text" id="productLine" name="Product line" required><br>
+
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" name="image" required><br>
+
+        <label for="unitPrice">Unit Price:</label>
+        <input type="number" step="0.01" id="unitPrice" name="Unit price" required><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="Quantity" required><br>
+
+        <label for="tax">Tax 5%:</label>
+        <input type="number" step="0.01" id="tax" name="Tax 5%" required><br>
+
+        <label for="total">Total:</label>
+        <input type="number" step="0.01" id="total" name="Total" required><br>
+
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="Date" required><br>
+
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="Time" required><br>
+
+        <label for="payment">Payment Method:</label>
+        <input type="text" id="payment" name="Payment" required><br>
+
+        <label for="cogs">COGS:</label>
+        <input type="number" step="0.01" id="cogs" name="cogs" required><br>
+
+        <label for="grossIncome">Gross Income:</label>
+        <input type="number" step="0.01" id="grossIncome" name="gross income" required><br>
+
+        <label for="rating">Rating:</label>
+        <input type="number" step="0.1" id="rating" name="Rating" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    </div>
